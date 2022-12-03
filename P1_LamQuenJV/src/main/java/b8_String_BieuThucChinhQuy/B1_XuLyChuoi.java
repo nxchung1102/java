@@ -9,6 +9,7 @@ package b8_String_BieuThucChinhQuy;
  * @author chung
  */
 public class B1_XuLyChuoi {
+
     public static void main(String[] args) {
         String name = "FPT Polytechnic";
         System.out.println(name);
@@ -19,17 +20,17 @@ public class B1_XuLyChuoi {
         //trim()
         System.out.println(name.trim());
         //substring()
-        System.out.println(name.trim().substring(4));
-        System.out.println(name.trim().substring(1, 6));
+        System.out.println("substring1=" + name.trim().substring(4));
+        System.out.println("substring2=" + name.trim().substring(1, 6));
         //charAt()
         System.out.println(name.charAt(0));
-        
+
         String monHoc = "Java         lap trinh huong doi tuong";
         System.out.println(monHoc);
-        String result[]= monHoc.split("\\s+");
+        String result[] = monHoc.split("\\s+");
         for (String str : result) {
             System.out.println(str);
-            System.out.println(monHoc.matches("(.*)trinh(.*)"));
         }
+        System.out.println(monHoc.matches("(.*)trinh(.*)"));
     }
 }

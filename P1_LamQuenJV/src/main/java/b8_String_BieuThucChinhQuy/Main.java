@@ -10,12 +10,6 @@ package b8_String_BieuThucChinhQuy;
  */
 public class Main {
 
-    public static void swap (int a,int b){
-    int temp;
-    temp=a;
-    a=b;
-    b=temp;
-    }
     public static void main(String[] args) {
 //        StringService cs = new StringService();
 //        int n = cs.checkInputNumber();
@@ -26,8 +20,6 @@ public class Main {
 //        System.out.println("date:" + date);
 //        String email = cs.checkEmail();
 //        System.out.println("email:" + email);
-        int a=7,b=6;
-        swap(a,b);
-        System.out.println(a+" "+b);
+        
     }
 }
