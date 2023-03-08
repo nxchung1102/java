@@ -28,8 +28,13 @@ public class TiepThi extends NhanVien {
     }
 
     @Override
-    double getThuNhap() {
-        return getLuong() + doanhSo * hoaHong;
+    public double getThueTN() {
+        return super.getThueTN();
+    }
+
+    @Override
+    public double getThuNhap() {
+        return super.getThuNhap() + doanhSo * hoaHong;
     }
 
     public double getDoanhSo() {
@@ -50,10 +55,9 @@ public class TiepThi extends NhanVien {
 
     @Override
     public void inThongTin() {
-        super.inThongTin(); 
-        System.out.println("doanh so: "+doanhSo);
-        System.out.println("hoa hong: "+hoaHong);
+        super.inThongTin();
+        System.out.printf("doanh so: %-10.0f \n", doanhSo);
+        System.out.printf("hoa hong: %-10.0f \n", hoaHong);
     }
-    
 
 }

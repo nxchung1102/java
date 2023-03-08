@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package lab6.Bai2;
+
 import java.util.*;
 
 /**
@@ -10,6 +11,7 @@ import java.util.*;
  * @author chung
  */
 public class SanPham {
+
     Scanner sc = new Scanner(System.in);
     private String name;
     private double donGia;
@@ -48,18 +50,18 @@ public class SanPham {
         this.hang = hang;
     }
 
-    public void nhap(){
+    public void nhap() {
         System.out.print("nhap ten san pham: ");
-        name= sc.nextLine();
+        name = sc.nextLine();
         System.out.print("nhap gia: ");
         donGia = Double.parseDouble(sc.nextLine());
         System.out.print("nhap hang: ");
-        hang=sc.nextLine();
+        hang = sc.nextLine();
     }
-    
+
     @Override
     public String toString() {
         return "SanPham{" + "name=" + name + ", donGia=" + donGia + ", hang=" + hang + '}';
     }
-    
+
 }

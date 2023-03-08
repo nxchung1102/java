@@ -12,20 +12,20 @@ import java.util.*;
  * @author chung
  */
 public class Bai2 {
-    
+
     public static void main(String[] args) {
         List<SanPham> lstSP = new ArrayList<>();
-        for (int i = 0; i <5; i++) {
+        for (int i = 0; i < 5; i++) {
             SanPham sp = new SanPham();
             sp.nhap();
             lstSP.add(sp);
-            
+
         }
         for (SanPham sp : lstSP) {
-            if(sp.getHang().equalsIgnoreCase("nokia")){
+            if (sp.getHang().equalsIgnoreCase("nokia")) {
                 System.out.println(sp);
             }
         }
-        
+
     }
 }

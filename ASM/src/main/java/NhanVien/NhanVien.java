@@ -4,35 +4,42 @@
  */
 package NhanVien;
 
+import java.util.Scanner;
+
 /**
  *
  * @author chung
  */
-public abstract class NhanVien {
+public class NhanVien {
 
+    Scanner sc = new Scanner(System.in);
     private String maNV;
     private String hoTen;
     private double luong;
 
-    abstract double getThuNhap();
+    public double getThuNhap() {
+        return luong;
+    }
 
     public double getThueTN() {
-        double thueTN = 0;
-        if (luong < 10000000 && luong > 0) {
-            return thueTN = luong;
-        } else if (luong >= 10000000 && luong < 15000000) {
-            return thueTN = luong * 0.1;
-        } else if (luong >= 15000000 && luong < 20000000) {
-            return thueTN = luong * 0.12;
+
+        if (getThuNhap() < 10000000 && getThuNhap() > 0) {
+            return 0;
+        } else if (getThuNhap() >= 10000000 && getThuNhap() < 15000000) {
+            return getThuNhap() * 0.1;
+        } else if (getThuNhap() >= 15000000 && getThuNhap() < 20000000) {
+            return getThuNhap() * 0.12;
         } else {
-            return thueTN = luong * 0.15;
+            return getThuNhap() * 0.15;
         }
     }
+
     public void inThongTin() {
         System.out.println("Ma NV: " + maNV);
         System.out.println("Ho ten:" + hoTen);
-        System.out.println("thu nhap: "+getThuNhap());
-        System.out.println("thue thu nhap: "+getThueTN());
+        System.out.printf("luong: %-10.0f \n" , luong);
+        System.out.printf("thu nhap: %-10.0f \n" , getThuNhap());
+        System.out.printf("thue thu nhap: %-10.0f \n" , getThueTN());
     }
 
     public NhanVien() {
